@@ -8,8 +8,4 @@ echo "BUILDDIR: $BUILD_DIR"
 
 BUILD_DIR="/app"
 
-if [ ! -f "$BUILD_DIR/poetry.lock" ] ; then
-    exit 1
-fi
-
 echo "Python Poetry"
