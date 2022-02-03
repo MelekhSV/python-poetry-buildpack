@@ -4,10 +4,4 @@ set -euo pipefail
 
 BUILD_DIR="$1"
 
-echo "BUILDDIR: $BUILD_DIR"
-
-ls $BUILD_DIR
-
-BUILD_DIR="/app"
-
 echo "Python Poetry"
