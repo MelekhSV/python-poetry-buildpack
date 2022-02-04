@@ -75,12 +75,17 @@ RUNTIME_FILE="runtime.txt"
 
 log "Export Python version from Poetry to Heroku $RUNTIME_FILE file"
 
+log 1
 if [ "${DISABLE_POETRY_CREATE_RUNTIME_FILE:-0}" != "0" ] ; then
     log "Skip generation of $RUNTIME_FILE file from poetry.lock"
     exit 0
 fi
 
+log "$RUNTIME_FILE"
+log "$(ls)"
+log "$(ls /)"
 if [ -f "$RUNTIME_FILE" ] ; then
+    log error
     log "$RUNTIME_FILE found, delete this file from your repository!" >&2
     exit 1
 fi
